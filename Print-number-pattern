@@ -1,0 +1,26 @@
+class Solution {
+// function to print pattern
+    print(key, loopCount) {
+        let arr = [];
+        
+        for(let i=key; i>0; i--){
+            for(let j=loopCount; j>0; j--){
+                arr.push(key);
+            }
+            key--;
+        }
+
+        arr.push(-1); 
+        return arr;
+    }
+
+    printPat(n) {
+        let res = [];
+
+        for (let x = n; x > 0; x--) {
+            res.push(...this.print(n, x)); 
+        }
+
+        return res;
+    }
+}
