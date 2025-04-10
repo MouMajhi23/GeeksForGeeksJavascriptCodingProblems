@@ -1,0 +1,28 @@
+class Solution {
+    //Function to check whether the number is perfect.
+    findFactorial(digit){
+        let res = 1;
+        for(let i = 1 ; i <= digit ; i++){
+            res = res * i;
+        }
+        return res;
+    }
+    isPerfect(N)
+    {   let num = N;
+        let sum = 0;
+        //your code here
+        while(N > 0){
+            let digit = N % 10;
+            sum = sum + this.findFactorial(digit);
+            N = Math.floor(N / 10);
+        }
+        
+        if(sum === num){
+            return 1;
+        }
+        else{
+            return 0;
+        }
+        
+    }
+}
