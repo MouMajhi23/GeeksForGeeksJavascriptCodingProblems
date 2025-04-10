@@ -14,6 +14,7 @@ class Solution {
         while(N > 0){
             let digit = N % 10;
             sum = sum + this.findFactorial(digit);
+//floor is required
             N = Math.floor(N / 10);
         }
         
