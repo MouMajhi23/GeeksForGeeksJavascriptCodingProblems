@@ -1,0 +1,19 @@
+class Solution {
+    checkPalindrome(number){
+            let originalNum = number+"";
+            let reverseNum = originalNum.split("").reverse().join("");
+            return originalNum === reverseNum;
+        }
+    isDigitSumPalindrome(n) {
+        // code here
+        let sum = 0;
+        while(n > 0){
+            let digit = n % 10;
+            sum += digit
+            n =Math.floor( n / 10 );
+        }
+        
+            
+        return this.checkPalindrome(sum);
+    }
+}
