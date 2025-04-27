@@ -1,0 +1,28 @@
+class Solution {
+    // Function to find two repeating elements in an array of size n.
+    findTwoElement(arr) {
+        // code here
+        let missing  = -1;
+let repeat = -1;
+let temp = new Array(arr.length+1).fill(0);
+//console.log("Temp: "+temp);
+
+for(let i = 0; i < arr.length; i++){
+    if(temp[arr[i]] === 0){
+        temp[arr[i]] = -1;
+    }
+    else{
+        repeat = arr[i];
+    }
+}
+
+for(let i = 0 ; i<=arr.length; i++){
+   
+    
+    if(temp[i] === 0){
+        missing  = i;
+    }
+}
+    return [repeat, missing];
+        
+  
