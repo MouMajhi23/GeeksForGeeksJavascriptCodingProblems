@@ -1,0 +1,24 @@
+class Solution {
+    // Function to remove duplicates from the given array.
+    removeDuplicates(arr) {
+        // Code Here
+
+// using pointer approach
+    let right =1;
+    let left = 1;
+    while (right < arr.length) {
+        let prev = right -1;
+    
+        if (arr[right] === arr[prev]) {
+            right++;
+        }
+        else{
+            arr[left] = arr[right];
+            left ++;
+            right++;
+        }
+    }
+// console.log(arr);
+// console.log("left: "+left);
+    return left;
+    }
